@@ -35,8 +35,8 @@ content:
         options:
           collection: tags
           multiple: true
-          value: {tagId}
-          label: {name}
+          value: "{tagId}"
+          label: "{fields.name}"
       - name: draft
         label: 下書き
         type: boolean
@@ -46,7 +46,7 @@ content:
   - name: tags
     label: タグ
     type: collection
-    path: tags
+    path: content/tags
     format: json
     filename:
       template: "{tagId}.json"
