@@ -47,7 +47,8 @@ content:
     type: collection
     path: tags
     format: json
-    filename: "{tagId}.json"
+    filename:
+      template: "{tagId}.json"
     fields:
       - name: tagId
         label: ID
