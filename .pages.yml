@@ -36,7 +36,7 @@ content:
           collection: tags
           multiple: true
           value: {tagId}
-          label: {fields.name}
+          label: {name}
       - name: draft
         label: 下書き
         type: boolean
