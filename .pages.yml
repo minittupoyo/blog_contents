@@ -47,7 +47,7 @@ content:
     type: collection
     path: tags
     format: json
-    filename: "{fields.tagId}.json"
+    filename: "{tagId}.json"
     fields:
       - name: tagId
         label: ID
