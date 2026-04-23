@@ -1,6 +1,7 @@
 media:
   input: images
   output: https://img.minittu.net/
+  rename: random
 
 content:
   - name: posts
