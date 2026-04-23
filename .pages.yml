@@ -46,7 +46,7 @@ content:
   - name: tags
     label: タグ
     type: collection
-    path: content/tags
+    path: tags
     format: json
     filename:
       template: "{tagId}.json"
