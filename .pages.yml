@@ -1,0 +1,59 @@
+media:
+  input: images
+  output: https://img.minittu.net/
+
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: posts
+    filename:
+      template: "{primary}.md"
+      field: create
+    delimiters: "---"
+    fields:
+      - name: title
+        label: タイトル
+        required: true
+      - name: description
+        label: 説明文
+        required: true
+      - name: date
+        label: 投稿日
+        type: date
+        required: true
+        options:
+          time: true
+          format: yyyy-MM-dd'T'HH:mm
+      - name: emoji
+        label: 絵文字
+        type: string
+      - name: tags
+        label: タグ
+        type: reference
+        options:
+          collection: tags
+          multiple: true
+          value: {tagId}
+          label: {fields.name}
+      - name: draft
+        label: 下書き
+        type: boolean
+      - name: body
+        label: 本文
+        type: rich-text
+  - name: tags
+    label: タグ
+    type: collection
+    path: tags
+    format: json
+    filename: "{fields.tagId}.json"
+    fields:
+      - name: tagId
+        label: ID
+        type: string
+        required: true
+      - name: name
+        label: 名前
+        type: string
+        required: true
